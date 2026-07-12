@@ -1,0 +1,13 @@
+Goals
+1.     Check for syntax error
+2.     Check for conflicts
+3a.    Check for redundant attributes
+3b.    Check for duplicate selectors
+
+Bonus: Note when overwriting attributes
+Bonus: Where / what error comes from
+
+Todo
+Now: Import files from figma and translate to css
+
+Future: Look into hydrated (SEO and rendering)
