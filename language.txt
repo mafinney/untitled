@@ -1,0 +1,22 @@
+Shapes: 
+    rectangle -> div
+    elipse -> div (100% border radius is a perfect circle)
+    triangle -> 0 width & 0 height with border (https://css-tricks.com/snippets/css/css-triangle/)
+    line -> <hr/>
+    arrow -> line with triangle (two borders instead of one)
+    star -> polygon with some crazy math
+    pen -> polygon with some even crazier math
+
+Text:
+    Header -> <h1/>
+    Subheader -> <h2/>
+    Body -> <p/>
+    Bullet points -> <li/>
+    
+    Custom:
+        Font weight -> font weight
+        Font size -> font size
+        Font color -> color
+        Text align -> text align
+        Stroke -> ??? (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke)
+
