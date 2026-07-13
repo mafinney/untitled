@@ -20,3 +20,5 @@ Text:
         Text align -> text align
         Stroke -> ??? (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke)
 
+Layers:
+    Layer 1 - > zIndex: 1
