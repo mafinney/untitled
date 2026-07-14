@@ -15,9 +15,9 @@ const fakeData = [
     shapePosition: { x: 0, y: -6 },
     shapeLocation: { width: 1920, height: 118 },
     shapeColor: {
-      r: 255,
-      g: 255,
-      b: 255,
+      r: 164,
+      g: 181,
+      b: 143,
       a: 1,
     },
   },
