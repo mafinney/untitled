@@ -164,10 +164,10 @@ const figmaData = {
   linkAccess: "view"
 };
 
-export default function parseDocument(doc) {
-    if (Array.isArray(doc.document.children)) {
-        console.log("doc.children contains elements...")
-        for (const page of doc.document.children) {
+export default function parseDocument({document}) {
+    if (Array.isArray(document.children)) {
+        console.log("children contains elements...")
+        for (const page of document.children) {
             parsePage(page)
         }
     }
@@ -176,14 +176,22 @@ export default function parseDocument(doc) {
 function parsePage(page) {
     if (Array.isArray(page.children)) {
         for (const child of page.children) {
-            parseChild(child)
+            console.log(parseChild(child))
         }
     }
 }
 
 function parseChild(child) {
-    console.log("Child: ")
-    console.log(child)
+    if (child.fills.length > 1) {
+        console.error("More than one color")
+    }
+
+    return ({
+        shapeType: child.type,
+        shapePosition: {x: child.absoluteBoundingBox.x, y: child.absoluteBoundingBox.y},
+        shapeLocation: {width: child.absoluteBoundingBox.width, height: child.absoluteBoundingBox.height},
+        shapeColor: child.fills[0].color
+    })
 }
 
 parseDocument(figmaData)
