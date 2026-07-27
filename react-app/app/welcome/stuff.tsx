@@ -1,28 +1,3 @@
-// const fakeData = [
-//   {
-//     shapeType: "RECTANGLE",
-//     shapePosition: { x: 0, y: -1 },
-//     shapeLocation: { width: 1920, height: 1080 },
-//     shapeColor: {
-//       r: 255,
-//       g: 255,
-//       b: 255,
-//       a: 1,
-//     },
-//   },
-//   {
-//     shapeType: "RECTANGLE",
-//     shapePosition: { x: 0, y: -6 },
-//     shapeLocation: { width: 1920, height: 118 },
-//     shapeColor: {
-//       r: 164,
-//       g: 181,
-//       b: 143,
-//       a: 1,
-//     },
-//   },
-// ];
-
 const figmaData = {
   document: {
     id: "0:0",
@@ -216,11 +191,18 @@ function parseChild(child) {
         console.error("More than one color")
     }
 
+    const shapeColor = {
+      r: 255 * (child.fills[0].color.r.toFixed(3)),
+      g: 255 * (child.fills[0].color.g.toFixed(3)),
+      b: 255 * (child.fills[0].color.b.toFixed(3)),
+      a: child.fills[0].color.a
+    }
+
     return ({
         shapeType: child.type,
         shapePosition: {x: child.absoluteBoundingBox.x, y: child.absoluteBoundingBox.y},
         shapeSize: {width: child.absoluteBoundingBox.width, height: child.absoluteBoundingBox.height},
-        shapeColor: child.fills[0].color
+        shapeColor: shapeColor
     })
 }
 
