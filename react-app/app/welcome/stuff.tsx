@@ -147,6 +147,170 @@ const figmaData = {
               "strokeType": "BASIC"
             }
           },
+          {
+            "id": "1:90",
+            "name": "Ellipse",
+            "type": "ELLIPSE",
+            "scrollBehavior": "SCROLLS",
+            "blendMode": "PASS_THROUGH",
+            "fills": [
+              {
+                "blendMode": "NORMAL",
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 0.71057701110839844,
+                  "b": 0.56231230497360229,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [
+              {
+                "blendMode": "NORMAL",
+                "type": "SOLID",
+                "color": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokeWeight": 0.0,
+            "strokeAlign": "INSIDE",
+            "absoluteBoundingBox": {
+              "x": 279,
+              "y": 386,
+              "width": 856.0,
+              "height": 689.0
+            },
+            "absoluteRenderBounds": {
+              "x": 279,
+              "y": 386,
+              "width": 856.0,
+              "height": 689.0
+            },
+            "constraints": {
+              "vertical": "TOP",
+              "horizontal": "LEFT"
+            },
+            "exportSettings": [
+              {
+                "suffix": "",
+                "format": "PNG",
+                "constraint": {
+                  "type": "SCALE",
+                  "value": 1.0
+                }
+              }
+            ],
+            "effects": [
+              {
+                "type": "DROP_SHADOW",
+                "visible": true,
+                "color": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 0.250
+                },
+                "blendMode": "NORMAL",
+                "offset": {
+                  "x": 0.0,
+                  "y": 4.0
+                },
+                "radius": 4.0,
+                "showShadowBehindNode": false
+              }
+            ],
+            "interactions": [],
+            "complexStrokeProperties": {
+              "strokeType": "BASIC"
+            }
+          },
+          {
+            "id": "1:90",
+            "name": "Text",
+            "type": "P",
+            "scrollBehavior": "SCROLLS",
+            "blendMode": "PASS_THROUGH",
+            "fills": [
+              {
+                "blendMode": "NORMAL",
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 0.71057701110839844,
+                  "b": 0.56231230497360229,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [
+              {
+                "blendMode": "NORMAL",
+                "type": "SOLID",
+                "color": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokeWeight": 0.0,
+            "strokeAlign": "INSIDE",
+            "absoluteBoundingBox": {
+              "x": 279,
+              "y": 386,
+              "width": 856.0,
+              "height": 689.0
+            },
+            "absoluteRenderBounds": {
+              "x": 279,
+              "y": 386,
+              "width": 856.0,
+              "height": 689.0
+            },
+            "constraints": {
+              "vertical": "TOP",
+              "horizontal": "LEFT"
+            },
+            "exportSettings": [
+              {
+                "suffix": "",
+                "format": "PNG",
+                "constraint": {
+                  "type": "SCALE",
+                  "value": 1.0
+                }
+              }
+            ],
+            "effects": [
+              {
+                "type": "DROP_SHADOW",
+                "visible": true,
+                "color": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 0.250
+                },
+                "blendMode": "NORMAL",
+                "offset": {
+                  "x": 0.0,
+                  "y": 4.0
+                },
+                "radius": 4.0,
+                "showShadowBehindNode": false
+              }
+            ],
+            "interactions": [],
+            "complexStrokeProperties": {
+              "strokeType": "BASIC"
+            }
+          }
         ]
       }
     ]
@@ -239,6 +403,29 @@ function displayShape(e) {
             borderRadius: "100%"
           }}
         />
+      )
+      break
+    case "H1":
+      return (
+        <h1></h1>
+      )
+      break
+    case "H2":
+      return (
+        <h2></h2>
+      )
+      break
+    case "H3":
+      return (
+        <h3></h3>
+      )
+      break
+    case "P":
+      return (
+        <p
+          style={{
+
+          }}></p>
       )
       break
     default:
