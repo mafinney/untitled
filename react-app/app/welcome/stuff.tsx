@@ -27,33 +27,19 @@ function parseChild(child) {
     return parseText(child);
   }
 
-  // Handles shapes
-  const shapeColor = {
-    r: 255 * (child.fills[0].color.r.toFixed(3)),
-    g: 255 * (child.fills[0].color.g.toFixed(3)),
-    b: 255 * (child.fills[0].color.b.toFixed(3)),
-    a: child.opacity
-  }
-
   return ({
     shapeType: child.type,
     shapePosition: { x: child.x, y: child.y },
     shapeSize: { width: child.width, height: child.height },
-    shapeColor: shapeColor
+    shapeColor: { r: 255 * (child.fills[0].color.r.toFixed(3)),
+                  g: 255 * (child.fills[0].color.g.toFixed(3)),
+                  b: 255 * (child.fills[0].color.b.toFixed(3)),
+                  a: child.opacity }
   })
 }
 
 function parseText(child) {
   // How to decide between H1, H2, so on... (id field???)
-
-  // This returns the info for the div that has the text inside it and the info for the text
-  const textColor = {
-    r: 255 * (child.fills[0].color.r.toFixed(3)),
-    g: 255 * (child.fills[0].color.g.toFixed(3)),
-    b: 255 * (child.fills[0].color.b.toFixed(3))
-  }
-
-  console.log(textColor)
 
   return ({
     shapeType: "TEXT",
@@ -61,7 +47,9 @@ function parseText(child) {
     divSize: { width: child.width, height: child.height },
     text: child.name,
     textFont: { size: child.fontSize, name: child.fontName },
-    textColor: textColor
+    textColor: { r: 255 * (child.fills[0].color.r.toFixed(3)),
+                 g: 255 * (child.fills[0].color.g.toFixed(3)),
+                 b: 255 * (child.fills[0].color.b.toFixed(3)) }
   })
 }
 
