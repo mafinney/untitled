@@ -1,0 +1,227 @@
+{
+    "version": "1.0.0",
+    "apiVersion": "1.0.0",
+    "document": {
+        "type": "DOCUMENT",
+        "id": "0:0",
+        "name": "Untitled",
+        "children": [
+            {
+                "type": "PAGE",
+                "id": "0:1",
+                "name": "Page 1",
+                "exportSettings": [
+                    {
+                        "format": "PNG",
+                        "suffix": "",
+                        "contentsOnly": true,
+                        "colorProfile": "DOCUMENT",
+                        "constraint": {
+                            "type": "SCALE",
+                            "value": 1
+                        }
+                    }
+                ],
+                "flowStartingPoints": [],
+                "guides": [],
+                "children": [
+                    {
+                        "type": "RECTANGLE",
+                        "id": "1:2",
+                        "name": "Rectangle 1",
+                        "x": 5.6843418860808015e-14,
+                        "y": 5.6843418860808015e-14,
+                        "width": 1920,
+                        "height": 1080,
+                        "visible": true,
+                        "locked": false,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "cornerRadius": 0,
+                        "cornerSmoothing": 0,
+                        "topLeftRadius": 0,
+                        "topRightRadius": 0,
+                        "bottomLeftRadius": 0,
+                        "bottomRightRadius": 0,
+                        "fillStyleId": "",
+                        "strokeStyleId": "",
+                        "strokeWeight": 1,
+                        "strokeTopWeight": 1,
+                        "strokeBottomWeight": 1,
+                        "strokeLeftWeight": 1,
+                        "strokeRightWeight": 1,
+                        "strokeJoin": "MITER",
+                        "strokeAlign": "INSIDE",
+                        "dashPattern": [],
+                        "strokeCap": "NONE",
+                        "strokeMiterLimit": 4,
+                        "rotation": 0,
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutPositioning": "AUTO",
+                        "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                        },
+                        "exportSettings": [],
+                        "relativeTransform": [
+                            [
+                                1,
+                                0,
+                                5.6843418860808015e-14
+                            ],
+                            [
+                                0,
+                                1,
+                                5.6843418860808015e-14
+                            ]
+                        ],
+                        "absoluteRenderBounds": {
+                            "x": 5.6843418860808015e-14,
+                            "y": 5.6843418860808015e-14,
+                            "width": 1920,
+                            "height": 1080
+                        },
+                        "fillGeometry": [
+                            {
+                                "windingRule": "NONZERO",
+                                "data": "M0 0 L1920 0 L1920 1080 L0 1080 L0 0 Z"
+                            }
+                        ],
+                        "fills": [
+                            {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                },
+                                "boundVariables": {}
+                            }
+                        ],
+                        "strokes": [],
+                        "effects": []
+                    },
+                    {
+                        "type": "ELLIPSE",
+                        "id": "1:28",
+                        "name": "Ellipse 1",
+                        "x": 660,
+                        "y": 306,
+                        "width": 669,
+                        "height": 552,
+                        "visible": true,
+                        "locked": false,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "cornerRadius": 0,
+                        "cornerSmoothing": 0,
+                        "fillStyleId": "",
+                        "strokeStyleId": "",
+                        "strokeWeight": 1,
+                        "strokeJoin": "MITER",
+                        "strokeAlign": "INSIDE",
+                        "dashPattern": [],
+                        "strokeCap": "NONE",
+                        "strokeMiterLimit": 4,
+                        "rotation": 0,
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutPositioning": "AUTO",
+                        "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                        },
+                        "exportSettings": [],
+                        "relativeTransform": [
+                            [
+                                1,
+                                0,
+                                660
+                            ],
+                            [
+                                0,
+                                1,
+                                306
+                            ]
+                        ],
+                        "absoluteRenderBounds": {
+                            "x": 660,
+                            "y": 306,
+                            "width": 669,
+                            "height": 552
+                        },
+                        "fillGeometry": [
+                            {
+                                "windingRule": "NONZERO",
+                                "data": "M669 276 C669 428.431 519.239 552 334.5 552 C149.761 552 0 428.431 0 276 C0 123.569 149.761 0 334.5 0 C519.239 0 669 123.569 669 276 Z"
+                            }
+                        ],
+                        "fills": [
+                            {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                    "r": 0.9567307829856873,
+                                    "g": 0,
+                                    "b": 0
+                                },
+                                "boundVariables": {}
+                            }
+                        ],
+                        "strokes": [],
+                        "effects": []
+                    }
+                ]
+            }
+        ]
+    },
+    "viewport": {
+        "zoom": 0.6807291507720947,
+        "center": {
+            "x": 959.9999999999999,
+            "y": 584.6671767406274
+        },
+        "bounds": {
+            "x": -36.72532517214996,
+            "y": -167.46748278500382,
+            "width": 1993.4506503442997,
+            "height": 1504.2693190512623
+        }
+    },
+    "localPaintStyles": [
+        {
+            "type": "PAINT",
+            "id": "S:60c9779aed138d5f1f4c19194cc7333b085ba07c,",
+            "name": "ui/color/primary",
+            "description": "",
+            "documentationLinks": [],
+            "remote": false,
+            "key": "60c9779aed138d5f1f4c19194cc7333b085ba07c",
+            "paints": [
+                {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                        "r": 0.40234375,
+                        "g": 0.3125,
+                        "b": 0.640625
+                    },
+                    "boundVariables": {}
+                }
+            ]
+        }
+    ],
+    "localTextStyles": [],
+    "localEffectStyles": [],
+    "localGridStyles": []
+}
