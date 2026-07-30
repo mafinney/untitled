@@ -39,10 +39,19 @@ function parseChild(child) {
 }
 
 function parseText(child) {
-  // How to decide between H1, H2, so on... (id field???)
+  let shapeType
+  if (child.fontSize >= 64) {
+    shapeType = "H1"
+  } else if (child.fontSize >= 48) {
+    shapeType = "H2"
+  } else if (child.fontSize >= 36) {
+    shapeType = "H3"
+  } else {
+    shapeType = "P"
+  }
 
   return ({
-    shapeType: "TEXT",
+    shapeType: shapeType,
     divPosition: { x: child.x, y: child.y },
     divSize: { width: child.width, height: child.height },
     text: child.name,
@@ -88,8 +97,7 @@ function displayShape(e) {
         />
       )
       break
-    case "TEXT":
-      console.log(e)
+    case "H1":
       return (
         <div
           key={`${e.shapeType}-${e.divPosition.x}-${e.divPosition.y}`}
@@ -114,28 +122,80 @@ function displayShape(e) {
           </h1>
         </div>)
       break
-    case "H1":
-      return (
-        <h2></h2>
-      )
-      break
     case "H2":
       return (
-        <h2></h2>
-      )
+        <div
+          key={`${e.shapeType}-${e.divPosition.x}-${e.divPosition.y}`}
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: e.divPosition.y,
+            left: e.divPosition.x,
+            backgroundColor: (`rgba(0, 0, 0, 0)`),
+            width: e.divSize.width,
+            height: e.divSize.height
+          }}
+        >
+          <h2
+            style={{
+              color: (`rgb(${e.textColor.r}, ${e.textColor.g}, ${e.textColor.b})`),
+              fontSize: e.textFont.size,
+              fontFamily: e.textFont.name
+            }}
+          >
+            {e.text}
+          </h2>
+        </div>)
       break
     case "H3":
       return (
-        <h3></h3>
-      )
+        <div
+          key={`${e.shapeType}-${e.divPosition.x}-${e.divPosition.y}`}
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: e.divPosition.y,
+            left: e.divPosition.x,
+            backgroundColor: (`rgba(0, 0, 0, 0)`),
+            width: e.divSize.width,
+            height: e.divSize.height
+          }}
+        >
+          <h3
+            style={{
+              color: (`rgb(${e.textColor.r}, ${e.textColor.g}, ${e.textColor.b})`),
+              fontSize: e.textFont.size,
+              fontFamily: e.textFont.name
+            }}
+          >
+            {e.text}
+          </h3>
+        </div>)
       break
     case "P":
       return (
-        <p
+        <div
+          key={`${e.shapeType}-${e.divPosition.x}-${e.divPosition.y}`}
           style={{
-
-          }}></p>
-      )
+            display: "flex",
+            position: "absolute",
+            top: e.divPosition.y,
+            left: e.divPosition.x,
+            backgroundColor: (`rgba(0, 0, 0, 0)`),
+            width: e.divSize.width,
+            height: e.divSize.height
+          }}
+        >
+          <p
+            style={{
+              color: (`rgb(${e.textColor.r}, ${e.textColor.g}, ${e.textColor.b})`),
+              fontSize: e.textFont.size,
+              fontFamily: e.textFont.name
+            }}
+          >
+            {e.text}
+          </p>
+        </div>)
       break
     default:
       console.log("bad");
