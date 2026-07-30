@@ -22,10 +22,12 @@ function parsePage(page) {
 }
 
 function parseChild(child) {
-  if (child.fills.length > 1) {
-    console.error("More than one color")
+  // Handles text
+  if (child.type == "TEXT") {
+    return parseText(child);
   }
 
+  // Handles shapes
   const shapeColor = {
     r: 255 * (child.fills[0].color.r.toFixed(3)),
     g: 255 * (child.fills[0].color.g.toFixed(3)),
@@ -38,6 +40,20 @@ function parseChild(child) {
     shapePosition: { x: child.x, y: child.y },
     shapeSize: { width: child.width, height: child.height },
     shapeColor: shapeColor
+  })
+}
+
+function parseText(child) {
+  // How to decide between H1, H2, so on... (id field???)
+
+  // This returns the info for the div that has the text inside it and the info for the text
+  return ({
+    shapeType: "TEXT",
+    divPosition: { x: child.x, y: child.y },
+    divSize: { width: child.width, height: child.height },
+    text: child.name,
+    textFont: { size: child.fontSize, name: child.fontName },
+    textColor: child.fills[0].color
   })
 }
 
@@ -76,9 +92,28 @@ function displayShape(e) {
         />
       )
       break
+    case "TEXT":
+      console.log(e)
+      return (
+        <div
+          key={`${e.shapeType}-${e.divPosition.x}-${e.divPosition.y}`}
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: e.divPosition.y,
+            left: e.divPosition.x,
+            backgroundColor: (`rgba(0, 0, 0, 0)`),
+            width: e.divSize.width,
+            height: e.divSize.height
+          }}
+        >
+          <h1
+            style={{color: e.textColor}}>{e.text}</h1>
+        </div>)
+      break
     case "H1":
       return (
-        <h1></h1>
+        <h2></h2>
       )
       break
     case "H2":
