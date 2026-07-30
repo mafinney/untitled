@@ -47,13 +47,21 @@ function parseText(child) {
   // How to decide between H1, H2, so on... (id field???)
 
   // This returns the info for the div that has the text inside it and the info for the text
+  const textColor = {
+    r: 255 * (child.fills[0].color.r.toFixed(3)),
+    g: 255 * (child.fills[0].color.g.toFixed(3)),
+    b: 255 * (child.fills[0].color.b.toFixed(3))
+  }
+
+  console.log(textColor)
+
   return ({
     shapeType: "TEXT",
     divPosition: { x: child.x, y: child.y },
     divSize: { width: child.width, height: child.height },
     text: child.name,
     textFont: { size: child.fontSize, name: child.fontName },
-    textColor: child.fills[0].color
+    textColor: textColor
   })
 }
 
@@ -108,7 +116,14 @@ function displayShape(e) {
           }}
         >
           <h1
-            style={{color: e.textColor}}>{e.text}</h1>
+            style={{
+              color: (`rgb(${e.textColor.r}, ${e.textColor.g}, ${e.textColor.b})`),
+              fontSize: e.textFont.size,
+              fontFamily: e.textFont.name
+            }}
+          >
+            {e.text}
+          </h1>
         </div>)
       break
     case "H1":
