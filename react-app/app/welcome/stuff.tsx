@@ -14,7 +14,7 @@ function parseDocument({ document }) {
 function parsePage(page) {
   const children: any[] = []
   if (Array.isArray(page.children)) {
-    for (const child of page.children) {
+    for (const child of page.children.reverse()) {
       children.push(parseChild(child))
     }
   }
@@ -27,6 +27,12 @@ function parseChild(child) {
     return parseText(child);
   }
 
+  if (child.type == "LINE") {
+    return parseLine(child);
+  }
+
+  console.log(child)
+
   return ({
     shapeType: child.type,
     shapePosition: { x: child.x, y: child.y },
@@ -34,7 +40,8 @@ function parseChild(child) {
     shapeColor: { r: 255 * (child.fills[0].color.r.toFixed(3)),
                   g: 255 * (child.fills[0].color.g.toFixed(3)),
                   b: 255 * (child.fills[0].color.b.toFixed(3)),
-                  a: child.opacity }
+                  a: child.opacity },
+    rotation: child.rotation
   })
 }
 
@@ -60,6 +67,21 @@ function parseText(child) {
                  g: 255 * (child.fills[0].color.g.toFixed(3)),
                  b: 255 * (child.fills[0].color.b.toFixed(3)) }
   })
+}
+
+function parseLine(child) {
+
+  const shape = ({
+    shapeType: child.type,
+    shapePosition: { x: child.x, y: child.y },
+    shapeSize: { width: child.width, height: child.height },
+    shapeColor: { r: 255 * (child.strokes[0].color.r.toFixed(3)),
+                 g: 255 * (child.strokes[0].color.g.toFixed(3)),
+                 b: 255 * (child.strokes[0].color.b.toFixed(3)) },
+    rotation: child.rotation
+  })
+  console.log(shape);
+  return shape
 }
 
 function displayShape(e) {
@@ -211,6 +233,23 @@ function displayShape(e) {
             borderLeft: `${e.shapeSize.width / 2}px solid transparent`,
             borderRight: `${e.shapeSize.width / 2}px solid transparent`,
             borderBottom: `${(e.shapeSize.height) * 0.866}px solid rgba(${e.shapeColor.r}, ${e.shapeColor.g}, ${e.shapeColor.b}, ${e.shapeColor.a})`
+          }}
+        />
+      )
+    case "LINE":
+      return (
+        <hr
+          key={`${e.shapeType}-${e.shapePosition.x}-${e.shapePosition.y}`}
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: `${e.shapePosition.y}px`,
+            left: `${e.shapePosition.x + e.shapeSize.width}px`,
+            width: `${e.shapeSize.width}px`,
+            height: `${e.shapeSize.height}px`,
+            zIndex: 99,
+            color: (`rgb(${e.shapeColor.r}, ${e.shapeColor.g}, ${e.shapeColor.b})`),
+            transform: `rotate(${-1 * e.rotation}deg)`
           }}
         />
       )

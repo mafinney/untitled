@@ -29,8 +29,8 @@
                         "type": "RECTANGLE",
                         "id": "1:2",
                         "name": "Rectangle 1",
-                        "x": 5.6843418860808015e-14,
-                        "y": 5.6843418860808015e-14,
+                        "x": 0,
+                        "y": 0,
                         "width": 1920,
                         "height": 1080,
                         "visible": true,
@@ -69,12 +69,12 @@
                             [
                                 1,
                                 0,
-                                5.6843418860808015e-14
+                                0
                             ],
                             [
                                 0,
                                 1,
-                                5.6843418860808015e-14
+                                0
                             ]
                         ],
                         "absoluteRenderBounds": {
@@ -1160,29 +1160,27 @@
                         "effects": []
                     },
                     {
-                        "type": "STAR",
-                        "id": "26:2",
-                        "name": "Star 1",
-                        "x": 1309,
-                        "y": 830,
-                        "width": 206,
-                        "height": 192,
+                        "type": "LINE",
+                        "id": "33:33",
+                        "name": "Line 1",
+                        "x": 0,
+                        "y": 0,
+                        "width": 602.59521484375,
+                        "height": 0,
                         "visible": true,
                         "locked": false,
                         "opacity": 1,
                         "blendMode": "PASS_THROUGH",
                         "isMask": false,
-                        "cornerRadius": 0,
-                        "cornerSmoothing": 0,
                         "fillStyleId": "",
                         "strokeStyleId": "",
                         "strokeWeight": 1,
                         "strokeJoin": "MITER",
-                        "strokeAlign": "INSIDE",
+                        "strokeAlign": "CENTER",
                         "dashPattern": [],
                         "strokeCap": "NONE",
                         "strokeMiterLimit": 4,
-                        "rotation": 0,
+                        "rotation": -21.41296897614837,
                         "layoutAlign": "INHERIT",
                         "layoutGrow": 0,
                         "layoutPositioning": "AUTO",
@@ -1191,47 +1189,40 @@
                             "vertical": "MIN"
                         },
                         "exportSettings": [],
-                        "pointCount": 5,
-                        "innerRadius": 0.3819660246372223,
                         "relativeTransform": [
                             [
-                                1,
-                                0,
-                                1309
+                                0.9309731721878052,
+                                -0.36508750915527344,
+                                0
                             ],
                             [
-                                0,
-                                1,
-                                830
+                                0.36508750915527344,
+                                0.9309731721878052,
+                                0
                             ]
                         ],
                         "absoluteRenderBounds": {
-                            "x": 1314.0411376953125,
-                            "y": 830,
-                            "width": 195.917724609375,
-                            "height": 173.6656494140625
+                            "x": 0,
+                            "y": -0.9309731721878052,
+                            "width": 561.3650512695312,
+                            "height": 220.9309539794922
                         },
-                        "fillGeometry": [
-                            {
-                                "windingRule": "NONZERO",
-                                "data": "M103 0 L126.125 66.3344 L200.959 66.3344 L140.417 107.331 L163.542 173.666 L103 132.669 L42.4581 173.666 L65.5831 107.331 L5.04118 66.3344 L79.8751 66.3344 L103 0 Z"
-                            }
-                        ],
-                        "fills": [
+                        "fillGeometry": [],
+                        "fills": [],
+                        "strokes": [
                             {
                                 "type": "SOLID",
                                 "visible": true,
                                 "opacity": 1,
                                 "blendMode": "NORMAL",
                                 "color": {
-                                    "r": 0.6538461446762085,
-                                    "g": 0.2106139063835144,
-                                    "b": 0.2106139063835144
+                                    "r": 1,
+                                    "g": 0,
+                                    "b": 0
                                 },
                                 "boundVariables": {}
                             }
                         ],
-                        "strokes": [],
                         "effects": []
                     }
                 ]
@@ -1242,11 +1233,11 @@
         "zoom": 0.6807291507720947,
         "center": {
             "x": 952.6549349655699,
-            "y": 599.3573068094873
+            "y": 661.0558530986992
         },
         "bounds": {
             "x": -44.07039020657995,
-            "y": -152.77735271614384,
+            "y": -91.0788064269319,
             "width": 1993.4506503442997,
             "height": 1504.2693190512623
         }
