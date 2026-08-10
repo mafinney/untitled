@@ -197,6 +197,23 @@ function displayShape(e) {
           </p>
         </div>)
       break
+    case "POLYGON":
+      return (
+        <div
+          key={`${e.shapeType}-${e.shapePosition.x}-${e.shapePosition.y}`}
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: e.shapePosition.y,
+            left: e.shapePosition.x,
+            width: 0,
+            height: 0,
+            borderLeft: `${e.shapeSize.width / 2}px solid transparent`,
+            borderRight: `${e.shapeSize.width / 2}px solid transparent`,
+            borderBottom: `${(e.shapeSize.height) * 0.866}px solid rgba(${e.shapeColor.r}, ${e.shapeColor.g}, ${e.shapeColor.b}, ${e.shapeColor.a})`
+          }}
+        />
+      )
     default:
       console.log("bad");
       break
