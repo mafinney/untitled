@@ -244,7 +244,7 @@ function displayShape(e) {
             display: "flex",
             position: "absolute",
             top: `${e.shapePosition.y}px`,
-            left: `${e.shapePosition.x + e.shapeSize.width}px`,
+            left: `${e.shapePosition.x}px`,
             width: `${e.shapeSize.width}px`,
             height: `${e.shapeSize.height + 1}px`,
             zIndex: 99,
