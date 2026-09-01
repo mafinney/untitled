@@ -238,7 +238,7 @@ function displayShape(e) {
       )
     case "LINE":
       return (
-        <hr
+        <div
           key={`${e.shapeType}-${e.shapePosition.x}-${e.shapePosition.y}`}
           style={{
             display: "flex",
@@ -246,9 +246,9 @@ function displayShape(e) {
             top: `${e.shapePosition.y}px`,
             left: `${e.shapePosition.x + e.shapeSize.width}px`,
             width: `${e.shapeSize.width}px`,
-            height: `${e.shapeSize.height}px`,
+            height: `${e.shapeSize.height + 1}px`,
             zIndex: 99,
-            color: (`rgb(${e.shapeColor.r}, ${e.shapeColor.g}, ${e.shapeColor.b})`),
+            backgroundColor: (`rgb(${e.shapeColor.r}, ${e.shapeColor.g}, ${e.shapeColor.b})`),
             transform: `rotate(${-1 * e.rotation}deg)`
           }}
         />
