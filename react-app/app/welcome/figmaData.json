@@ -29,12 +29,12 @@
                         "type": "RECTANGLE",
                         "id": "1:2",
                         "name": "Rectangle 1",
-                        "x": 14,
+                        "x": 0,
                         "y": 0,
                         "width": 1440,
                         "height": 960,
                         "visible": true,
-                        "locked": false,
+                        "locked": true,
                         "opacity": 1,
                         "blendMode": "PASS_THROUGH",
                         "isMask": false,
@@ -69,7 +69,7 @@
                             [
                                 1,
                                 0,
-                                14
+                                0
                             ],
                             [
                                 0,
@@ -78,7 +78,7 @@
                             ]
                         ],
                         "absoluteRenderBounds": {
-                            "x": 14,
+                            "x": 0,
                             "y": 0,
                             "width": 1440,
                             "height": 960
@@ -1163,8 +1163,8 @@
                         "type": "LINE",
                         "id": "33:33",
                         "name": "Line 1",
-                        "x": 98,
-                        "y": 114,
+                        "x": 1.1657341758564144e-15,
+                        "y": 1.7763568394002505e-15,
                         "width": 602.59521484375,
                         "height": 0,
                         "visible": true,
@@ -1180,7 +1180,7 @@
                         "dashPattern": [],
                         "strokeCap": "NONE",
                         "strokeMiterLimit": 4,
-                        "rotation": -3.18055487103936e-15,
+                        "rotation": -45,
                         "layoutAlign": "INHERIT",
                         "layoutGrow": 0,
                         "layoutPositioning": "AUTO",
@@ -1191,21 +1191,21 @@
                         "exportSettings": [],
                         "relativeTransform": [
                             [
-                                0.9999999403953552,
-                                -5.551115123125783e-17,
-                                98
+                                0.7071067094802856,
+                                -0.7071067094802856,
+                                1.1657341758564144e-15
                             ],
                             [
-                                5.551115123125783e-17,
-                                0.9999999403953552,
-                                114
+                                0.7071067094802856,
+                                0.7071067094802856,
+                                1.7763568394002505e-15
                             ]
                         ],
                         "absoluteRenderBounds": {
-                            "x": 98,
-                            "y": 113,
-                            "width": 602.5951538085938,
-                            "height": 1
+                            "x": 0,
+                            "y": -0.7071075439453125,
+                            "width": 426.8062438964844,
+                            "height": 426.80621337890625
                         },
                         "fillGeometry": [],
                         "fills": [],

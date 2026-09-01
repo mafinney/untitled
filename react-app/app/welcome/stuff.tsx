@@ -243,12 +243,13 @@ function displayShape(e) {
           style={{
             display: "flex",
             position: "absolute",
-            top: `${e.shapePosition.y}px`,
+            top: `${-1 * e.shapePosition.y}px`,
             left: `${e.shapePosition.x}px`,
             width: `${e.shapeSize.width}px`,
             height: `${e.shapeSize.height + 1}px`,
             zIndex: 99,
             backgroundColor: (`rgb(${e.shapeColor.r}, ${e.shapeColor.g}, ${e.shapeColor.b})`),
+            transformOrigin: "left",
             transform: `rotate(${-1 * e.rotation}deg)`
           }}
         />
