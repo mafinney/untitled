@@ -32,7 +32,7 @@
                         "x": 0,
                         "y": 0,
                         "width": 1440,
-                        "height": 1080,
+                        "height": 960,
                         "visible": true,
                         "locked": false,
                         "opacity": 1,
@@ -81,12 +81,12 @@
                             "x": 0,
                             "y": 0,
                             "width": 1440,
-                            "height": 1080
+                            "height": 960
                         },
                         "fillGeometry": [
                             {
                                 "windingRule": "NONZERO",
-                                "data": "M0 0 L1440 0 L1440 1080 L0 1080 L0 0 Z"
+                                "data": "M0 0 L1440 0 L1440 960 L0 960 L0 0 Z"
                             }
                         ],
                         "fills": [
